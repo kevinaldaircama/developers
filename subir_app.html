@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir Aplicación</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Subir Aplicación</h2>
+        <form id="appForm">
+            <label>Nombre de la App *</label>
+            <input type="text" id="nombre" required>
+
+            <label>Versión *</label>
+            <input type="text" id="version" required>
+
+            <label>Descripción</label>
+            <textarea id="descripcion"></textarea>
+
+            <label>Logo *</label>
+            <input type="file" id="logo" accept="image/*">
+
+            <label>Captura de pantalla *</label>
+            <input type="file" id="captura" accept="image/*">
+
+            <label>Sube tu app (APK) *</label>
+            <input type="file" id="apk" accept=".apk">
+
+            <button type="submit">Enviar Aplicación</button>
+        </form>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <p>Tu aplicación se ha enviado con éxito y está en revisión.</p>
+        </div>
+    </div>
+
+    <script src="subir_app.js"></script>
+</body>
+</html>
