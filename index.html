@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reseñas - Online Apps Store Oficial</title>
+
+    <style>
+        /* Fuente y estilos generales */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Contenedor principal */
+.contenedor {
+    max-width: 600px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    animation: slideUp 1s ease-in-out;
+}
+
+/* Descripción */
+.descripcion {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+    color: #fff;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Formularios */
+.formulario input, 
+.formulario select, 
+.formulario textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.formulario input:focus, 
+.formulario select:focus, 
+.formulario textarea:focus {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Estrellas */
+.estrellas {
+    margin: 15px 0;
+}
+
+.estrella {
+    font-size: 35px;
+    color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.estrella:hover, 
+.estrella.seleccionada {
+    color: gold;
+    transform: scale(1.2);
+}
+
+/* Botones */
+button {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    transform: scale(1.05);
+}
+
+/* Comentarios */
+.comentarios {
+    margin-top: 30px;
+}
+
+.comentario {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Modal */
+.modal, .modal-reseñas {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-contenido {
+    background: rgba(255, 255, 255, 0.2);
+    margin: 10% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+    backdrop-filter: blur(15px);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.cerrar {
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.cerrar:hover {
+    color: #ff4b2b;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <div class="descripcion">
+            <h2>ONLINE APPS STORE OFICIAL</h2>
+            <p>Tienda de aplicaciones para Android y iPhone mejor que otras plataformas.</p>
+        </div>
+
+        <h1>Valora nuestra App</h1>
+
+        <div class="formulario">
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" placeholder="Ejemplo: correo@ejemplo.com" required />
+
+            <label for="app">Selecciona la App:</label>
+            <select id="app" required>
+                <option value="" disabled selected>-- Selecciona una App --</option>
+                <option value="online app store" />Online app store
+
+                <option value="apk editor pro" />Apk editor pro
+
+                <option value="shayda vip" />Shayda vip
+
+                <option value="chat gpt" />Chat gpt
+
+                <option value="radio streaming " />Radio streaming
+
+                <option value="radio streaming music" />Radio streaming music
+
+                <option value="juegos sin internet" />Juegos sin internet
+              
+              <option value="KEVINTECHTUTORIALS EMPRENDIMIENTO" />KEVINTECHTUTORIALS EMPRENDIMIENTO
+              <option value="Netmirrow" />Netmirrow
+
+<option value="kevintechtutorial vpn" />kevintechtutorial vpn 
+<option value="multi sin redes " />multi sin redes 
+
+    <option value="Appcreator24 herramientas Lite" />Appcreator24 herramientas Lite 
+   <option value="FulbitolibreTV4" />FulbitolibreTV4
+              
+<option value="Ghosycat Labs" />Ghosycat Labs
+            </select>
+
+            <div class="estrellas" id="estrellas">
+                <span class="estrella" data-value="1">★</span>
+                <span class="estrella" data-value="2">★</span>
+                <span class="estrella" data-value="3">★</span>
+                <span class="estrella" data-value="4">★</span>
+                <span class="estrella" data-value="5">★</span>
+            </div>
+
+            <textarea id="comentario" placeholder="Escribe tu comentario aquí..." required></textarea>
+            <button type="button" onclick="enviarValoracion()">Enviar Valoración</button>
+        </div>
+
+        <div class="comentarios" id="comentarios">
+            <h2>Comentarios:</h2>
+        </div>
+
+        <button id="btnMostrarMas" onclick="mostrarTodasLasReseñas()">Mostrar más</button>
+    </div>
+
+    <!-- Modal de confirmación -->
+    <div id="modal" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModal()">&times;</span>
+            <h2>¡Valoración Enviada!</h2>
+            <p>Tu reseña ha sido guardada con éxito.</p>
+        </div>
+    </div>
+
+    <!-- Modal para mostrar todas las reseñas -->
+    <div id="modalReseñas" class="modal-reseñas">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModalReseñas()">&times;</span>
+            <h2>Reseñas Completas</h2>
+            <div id="contenidoReseñas"></div>
+        </div>
+    </div>
+
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getFirestore, collection, addDoc, getDocs, deleteDoc, doc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyAJ_c7kq-OqZ94m9ff226cvcsFhAme8iUI",
+        authDomain: "webapp-cc5fc.firebaseapp.com",
+        projectId: "webapp-cc5fc",
+        storageBucket: "webapp-cc5fc.appspot.com",
+        messagingSenderId: "263889779123",
+        appId: "1:263889779123:web:2dbb1a113bde1e24e1f3c6",
+        measurementId: "G-D1GPCV9WS3"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    let calificacion = 0;
+    document.querySelectorAll('.estrella').forEach(estrella => {
+        estrella.addEventListener('click', () => {
+            calificacion = estrella.getAttribute('data-value');
+            document.querySelectorAll('.estrella').forEach(e => e.classList.remove('seleccionada'));
+            for (let i = 0; i < calificacion; i++) {
+                document.querySelectorAll('.estrella')[i].classList.add('seleccionada');
+            }
+        });
+    });
+
+    async function enviarValoracion() {
+        const correo = document.getElementById('correo').value;
+        const app = document.getElementById('app').value;
+        const comentario = document.getElementById('comentario').value;
+
+        if (!correo || !app || !comentario || calificacion === 0) {
+            alert("Por favor, completa todos los campos.");
+            return;
+        }
+
+        // Obtener la fecha actual
+        const fecha = new Date().toISOString(); // Guardamos la fecha en formato ISO
+
+        await addDoc(collection(db, "reseñas"), { correo, app, comentario, calificacion, fecha });
+
+        document.getElementById("modal").style.display = "block";
+        mostrarComentarios();
+    }
+
+    async function mostrarComentarios() {
+    const comentariosDiv = document.getElementById('comentarios');
+    comentariosDiv.innerHTML = "<h2>Comentarios:</h2>";
+    const querySnapshot = await getDocs(collection(db, "reseñas"));
+    const ahora = new Date();
+    
+    let comentariosArray = [];
+    
+    querySnapshot.forEach(async (docSnapshot) => {
+        const data = docSnapshot.data();
+        const fechaReseña = new Date(data.fecha);
+        const diferenciaDias = (ahora - fechaReseña) / (1000 * 60 * 60 * 24);
+
+        if (diferenciaDias < 7) {
+            comentariosArray.push({
+                id: docSnapshot.id,
+                app: data.app,
+                calificacion: data.calificacion,
+                correo: data.correo,
+                comentario: data.comentario
+            });
+        } else {
+            // Eliminar comentarios con más de 7 días
+            await deleteDoc(doc(db, "reseñas", docSnapshot.id));
+        }
+    });
+
+    // Ordenar los comentarios del más reciente al más antiguo
+    comentariosArray.reverse();
+
+    // Mostrar solo los primeros 10 comentarios
+    let limiteInicial = 10;
+    comentariosArray.slice(0, limiteInicial).forEach(data => {
+        comentariosDiv.innerHTML += `
+            <div class="comentario">
+                <h4>${data.app} (${data.calificacion} estrellas)</h4>
+                <p><strong>Correo:</strong> ${data.correo}</p>
+                <p><strong>Comentario:</strong> ${data.comentario}</p>
+            </div>`;
+    });
+
+    // Si hay más de 10 comentarios, mostrar el botón
+    if (comentariosArray.length > limiteInicial) {
+        document.getElementById("btnMostrarMas").style.display = "block";
+        document.getElementById("btnMostrarMas").onclick = function() {
+            mostrarTodasLasReseñas(comentariosArray);
+        };
+    } else {
+        document.getElementById("btnMostrarMas").style.display = "none";
+    }
+}
+
+// Función para mostrar todos los comentarios en un modal
+function mostrarTodasLasReseñas(comentariosArray) {
+    const contenidoReseñas = document.getElementById("contenidoReseñas");
+    contenidoReseñas.innerHTML = "";
+    
+    comentariosArray.forEach(data => {
+        contenidoReseñas.innerHTML += `
+            <div class="comentario">
+                <h4>${data.app} (${data.calificacion} estrellas)</h4>
+                <p><strong>Correo:</strong> ${data.correo}</p>
+                <p><strong>Comentario:</strong> ${data.comentario}</p>
+            </div>`;
+    });
+
+    document.getElementById("modalReseñas").style.display = "block";
+}
+
+// Cerrar el modal de reseñas
+function cerrarModalReseñas() {
+    document.getElementById("modalReseñas").style.display = "none";
+}
+
+// Ejecutar `mostrarComentarios()` al cargar la página
+document.addEventListener("DOMContentLoaded", mostrarComentarios);
+
+// Hacer accesibles las funciones globalmente
+window.enviarValoracion = enviarValoracion;
+
+window.mostrarTodasLasReseñas = mostrarTodasLasReseñas;
+
+window.cerrarModal = cerrarModal;
+window.cerrarModalReseñas = cerrarModalReseñas;
+
+function cerrarModal() {
+    document.getElementById("modal").style.display = "none";
+}
+</script>
+</body>
+  </html>
+              
